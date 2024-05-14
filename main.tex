@@ -1,0 +1,44 @@
+\documentclass[11pt,a4paper]{report}
+
+\usepackage[utf8]{inputenc}  % 支持 UTF-8 编码
+\usepackage{graphicx}        % 引入图像处理包
+\usepackage{hyperref}
+\usepackage{float}
+\usepackage[UTF8]{ctex}  % 自动处理中文支持和字体
+\usepackage{sty/mystyle}  % 加载自定义样式
+\usepackage{sty/graphicsconfig}
+\usepackage{sty/headerstyle}
+\usepackage{sty/codehighlight}
+\title{树莓派与Dobot机械臂}
+\author{山东大学工程训练中心}
+\date{\today}
+
+\begin{document}
+	%\maketitle
+	\begin{titlepage}
+		\centering
+		\vspace*{1cm}  % 添加顶部空间
+		
+		\Huge
+		\textbf{树莓派与Dobot机械臂}
+		
+		\vspace{0.5cm}
+
+		
+		\vspace{1.5cm}
+		
+		\includegraphics[width=0.5\textwidth]{校徽.png}  % 插入图片
+		
+		\vfill
+		
+		\Large
+		山东大学工程训练中心\\
+		\Large
+		2024.4
+		
+	\end{titlepage}
+	\tableofcontents  % 自动生成目录
+	\input{chapters/树莓派.tex}
+	\input{chapters/机械臂.tex}
+	
+\end{document}

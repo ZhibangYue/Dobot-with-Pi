@@ -1,0 +1,56 @@
+% 提供包的信息
+\ProvidesPackage{mystyle}
+
+% 加载所需的宏包
+\RequirePackage{titlesec}
+\RequirePackage{titletoc}  % 加载 titletoc 宏包
+% 提供包的信息
+\ProvidesPackage{mystyle}
+
+% 加载所需的宏包
+\RequirePackage{titlesec}
+
+% 自定义章节格式
+\titleformat{\chapter}
+{\normalfont\Huge\bfseries} % 字体样式
+{第\thechapter 章} % 标题前的标签
+{1em} % 标签和标题文字之间的间距
+{} % 在标题前执行的代码
+
+% 自定义节的格式
+\titleformat{\section}
+{\normalfont\Large\bfseries} % 字体样式
+{\thesection} % 标题前的标签
+{1em} % 标签和标题文字之间的间距
+{} % 在标题前执行的代码
+
+% 自定义小节的格式
+\titleformat{\subsection}
+{\normalfont\large\bfseries} % 字体样式
+{\thesubsection} % 标题前的标签
+{1em} % 标签和标题文字之间的间距
+{} % 在标题前执行的代码
+
+% 定义小节编号格式
+\renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
+
+% 确保目录中也显示定制的格式
+\titlecontents{chapter}[0pt] % 左间距
+{\vspace{1ex}} % 上方间距
+{\bfseries 第\thecontentslabel 章\quad} % 在标题前的内容
+{\bfseries} % 无编号时的样式
+{\hfill\contentspage} % 页码之前的填充
+
+\titlecontents{section}[1em] % 左间距
+{\vspace{0.5ex}} % 上方间距
+{\thecontentslabel\quad} % 在标题前的内容
+{} % 无编号时的样式
+{\titlerule*[1pc]{.}\contentspage} % 页码之前的填充
+
+\titlecontents{subsection}[2em] % 左间距
+{\vspace{0.5ex}} % 上方间距
+{\thecontentslabel\quad} % 在标题前的内容
+{} % 无编号时的样式
+{\titlerule*[1pc]{.}\contentspage} % 页码之前的填充
+
+% 这里可以添加其他的样式定义

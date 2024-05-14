@@ -1,0 +1,24 @@
+% headerstyle.sty
+\ProvidesPackage{headerstyle}
+
+\RequirePackage{fancyhdr} % 引入 fancyhdr 宏包
+
+% 重定义 \sectionmark 命令来自定义页眉中的节标题
+\renewcommand{\sectionmark}[1]{\markright{第\thesection 节\ #1}}
+% 重定义 \chaptermark 命令来自定义页眉中的章标题
+\renewcommand{\chaptermark}[1]{\markboth{第\thechapter 章\ #1}{}}
+
+% 配置页眉样式
+\pagestyle{fancy}
+\fancyhf{} % 清空当前的页眉和页脚
+\fancyhead[L]{\nouppercase{\leftmark}} % 左侧页眉显示节标题
+\fancyhead[R]{\nouppercase{\rightmark}} % 左侧页眉显示节标题
+
+\renewcommand{\headrulewidth}{0.4pt} % 页眉下划线宽度
+
+
+% 设置页脚和页眉的样式
+
+\fancyfoot[C]{\thepage} % 中间页脚显示页码
+\renewcommand{\footrulewidth}{0pt} % 页脚横线宽度
+\endinput

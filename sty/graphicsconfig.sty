@@ -1,0 +1,12 @@
+% graphicconfig.sty
+\ProvidesPackage{graphicconfig}
+
+\RequirePackage{graphicx} % 引入 graphicx 宏包
+
+% 图片全局设置
+\graphicspath{{images/}} % 假设所有图片存储在文档根目录下的 images 文件夹中
+
+% 可以在这里定义更多的全局图形参数，例如默认宽度等
+\newcommand{\defaultimagewidth}{0.8\textwidth}
+
+\endinput

@@ -1,0 +1,88 @@
+% codehighlight.sty
+\ProvidesPackage{codehighlight}
+
+% 依赖宏包
+\RequirePackage{listings}
+\RequirePackage{xcolor}
+
+% 全局代码样式设置
+\lstset{
+	basicstyle=\ttfamily\footnotesize,
+	columns=fullflexible,
+	breaklines=true,
+	captionpos=b,
+	frame=lines,
+	postbreak=\mbox{\textcolor{red}{$\hookrightarrow$}\space},
+	showstringspaces=false,
+	tabsize=4
+}
+
+% Python 代码风格
+\lstdefinestyle{pythonstyle}{
+	language=Python,
+	keywordstyle=\color{blue},
+	commentstyle=\color{green},
+	stringstyle=\color{red}
+}
+
+% JavaScript 代码风格
+\lstdefinestyle{javascriptstyle}{
+	language=JavaScript,
+	keywordstyle=\color{orange},
+	commentstyle=\color{gray},
+	stringstyle=\color{red}
+}
+
+% C++ 代码风格
+\lstdefinestyle{cppstyle}{
+	language=C++,
+	keywordstyle=\color{blue},
+	commentstyle=\color{green},
+	stringstyle=\color{red}
+}
+
+\lstdefinelanguage{Lua}{
+	keywords={and, break, do, else, elseif, end, false, for, function, if, in, local, nil, not, or, repeat, return, then, true, until, while},
+	keywordstyle=\color{purple}\bfseries,
+	ndkeywords={print},
+	ndkeywordstyle=\color{orange}\bfseries,
+	identifierstyle=\color{black},
+	sensitive=false,
+	comment=[l]{--},
+	morecomment=[s]{--[[}{]]--},
+	commentstyle=\color{olive}\ttfamily,
+	stringstyle=\color{orange}\ttfamily,
+	morestring=[b]',
+	morestring=[b]"
+}
+
+% Lua 代码风格
+\lstdefinestyle{luastyle}{
+	language=Lua,
+	keywordstyle=\color{purple},
+	commentstyle=\color{olive},
+	stringstyle=\color{orange}
+}
+
+% Bash 代码风格
+\lstdefinestyle{bashstyle}{
+	language=bash,
+	keywordstyle=\color{violet},
+	commentstyle=\color{teal},
+	stringstyle=\color{brown}
+}
+
+\lstdefinestyle{configstyle}{
+	basicstyle=\ttfamily\small,       % 设置基本风格
+	columns=fullflexible,
+	breaklines=true,                  % 自动换行
+	postbreak=\mbox{\textcolor{red}{$\hookrightarrow$}\space}, % 换行符
+	commentstyle=\color{gray}\ttfamily, % 设置注释风格
+	morecomment=[l]{\#},              % 行注释
+	moredelim=[il][\textcolor{gray}]{\#}, % 行内注释
+	literate={=}{{{\color{red}=}}}1   % 等号高亮
+	{/}{{{\color{red}/}}}1,  % 斜杠高亮
+}
+
+
+\endinput
